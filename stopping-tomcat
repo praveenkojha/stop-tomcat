@@ -1,0 +1,7 @@
+- hosts: your-host-name
+  become: true
+  gather_facts: no
+  tasks:
+    - name: start tomcat
+      command: nohup /opt/apache-tomcat-7.0.61/bin/shutdown.sh
+      become: true
